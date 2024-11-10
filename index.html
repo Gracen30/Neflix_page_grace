@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace González</title>
+    <link rel="stylesheet" href="css/estiloProyecto10.css">
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="shortcut icon" href="./img/logonetflix.png" type="image/x-icon">
+</head>
+<body>
+  <main>
+    <header>
+      <a href="#" class="logo"
+        ><img src="/T13.Proyecto10.Netflix Page/img/logo.png" alt="logo netflix" width="250px"
+      /></a>
+            <ul class="navegacion">
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">PELÍCULAS</a></li>
+                <li><a href="#">SERIES</a></li>
+                <li><a href="#">MI LISTA</a></li>
+            </ul>
+        <div class="Búscador">
+            <input type="text" placeholder="BÚSCADOR">
+        </div>
+
+        </header>
+        <section class="banner">
+          <img src="/T13.Proyecto10.Netflix Page/img/chicagomed.jpeg" alt="personaje" class="bg" />
+          <span class="sombraImg"></span>
+          <div class="content">
+            <img src="/T13.Proyecto10.Netflix Page/img/nbc_onechicago2024_chicagomed_oneapp_logo_white_1.jpg" class="movieTitle" />
+            <h4>
+              <span>2015</span>
+              <span><i>16 +</i></span>
+              <span>10 Temporadas</span>
+              <span>Serie</span>
+            </h4>
+            <p>
+              El caótico día a día del hospital más colapsado de Chicago, y el duro trabajo que realiza su entregado equipo de médicos enfermeras para que el sistema siga funcionando. Al mismo tiempo que afrontan sus problemas personales, estos médicos tendrán que resolver casos de extraordinaria gravedad.
+            </p>
+            <div class="buttons">
+              <a href="#">Play</a>
+              <a href="#">My list</a>
+            </div>
+          </div>
+          <a href="#" class="play" onclick="toggleVideo();">
+              <img src="/T13.Proyecto10.Netflix Page/img/ic_play_circle_filled_white_48px-512.jpg" />Watch Trailer
+          </a>
+        </section>
+        <section class="trailer">
+          <video src="/T13.Proyecto10.Netflix Page/img/Chicago Med - Tráiler (MX).mp4" controls="true"></video>
+          <img src="/T13.Proyecto10.Netflix Page/img/close-circular-button-symbol_icon-icons.com_73292 (1).png" class="close" onclick="toggleVideo();">
+  
+    </main>
+    <script>
+      function toggleVideo(){
+          const trailer= document.querySelector(".trailer");
+          const video = document.querySelector("video");
+          trailer.classList.toggle("active");
+          video.currentTime=0;
+          video.pause();
+
+      }
+  </script>
+
+</body>
+</html>
